@@ -468,12 +468,12 @@ let g:run_all_formatters_python = 1
 
 let g:ycm_confirm_extra_conf = 0
 
-
+noremap <leader>t :vert term<CR>
 noremap <leader>z :Goyo<CR>
 noremap Q :wq<CR>
-noremap QA :wqa<CR>
+noremap QA :qa<CR>
 noremap <leader>n :NERDTree<CR>
-
+noremap <leader>u :close<CR>
 
 "Quickly Run
 """"""""""""""""""""""
@@ -513,5 +513,7 @@ func! CompileRunGcc()
         exec "!firefox %.html &"
     endif
 endfunc
+
+
 
 
