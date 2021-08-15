@@ -383,7 +383,7 @@ map <leader>s? z=
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " Quickly open a buffer for scribble
-map <leader>q :e ~/buffer<cr>
+"map <leader>q :e ~/buffer<cr>
 
 " Quickly open a markdown buffer for scribble
 map <leader>x :e ~/buffer.md<cr>
@@ -471,10 +471,10 @@ let g:ycm_confirm_extra_conf = 0
 noremap <leader>t :vert term<CR>
 noremap <leader>z :Goyo<CR>
 noremap Q :wq<CR>
-noremap QA :qa<CR>
+noremap QA :wqa<CR>
 noremap <leader>n :NERDTree<CR>
 noremap <leader>u :close<CR>
-
+noremap <leader>q :qa!<CR>
 "Quickly Run
 """"""""""""""""""""""
 map <F5> :call CompileRunGcc()<CR>
