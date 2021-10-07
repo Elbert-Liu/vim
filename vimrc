@@ -445,27 +445,9 @@ function! VisualSelection(direction, extra_filter) range
     let @" = l:saved_reg
 endfunction
 
-
-noremap <F3> :Autoformat<CR>
-let g:autoformat_autoindent = 0
-let g:autoformat_retab = 0
-let g:autoformat_remove_trailing_spaces = 0
-let g:formatters_vue = ['eslint_local', 'stylelint']
-let g:run_all_formatters_vue = 1
-
-let g:formatters_python = ['black']
-let g:run_all_formatters_python = 1
-
-
-"let g:formatters_cpp = ['_clang-format']
-"let g:run_all_formatters_cpp = 1
-
-"let g:formatters_c = ['.clang-format']
-"let g:run_all_formatters_c = 1
-
-"let g:formatters_java = ['.clang-format']
-"let g:run_all_formatters_java = 1
-
+noremap <F3> :Autoformat<CR>:w<CR>
+let g:autoformat_verbosemode=1
+let g:formatter_yapf_style = 'pep8'
 let g:ycm_confirm_extra_conf = 0
 
 noremap <leader>t :vert term<CR>
@@ -513,7 +495,3 @@ func! CompileRunGcc()
         exec "!firefox %.html &"
     endif
 endfunc
-
-
-
-
